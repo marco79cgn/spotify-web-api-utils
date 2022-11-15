@@ -1,5 +1,5 @@
 # spotify-web-api-utils
-A collection of scripts, siri shortcuts etc. involving the Spotify web API
+A collection of scripts, siri shortcuts etc. involving the [Spotify web API](https://developer.spotify.com/documentation/web-api/)
 
 ## radioeins to Spotify automatic live playlist creator
 A little shell script which curls the current song on [radioeins vom rbb](https://www.radioeins.de) and adds it to a Spotify playlist using their official [web api](https://developer.spotify.com/documentation/web-api/). I'm using it on a Raspberry Pi but you can run it on any machine that is capable of executing shell scripts. The script uses perl to decode html entities, xmllint to parse html and curl for http calls.
