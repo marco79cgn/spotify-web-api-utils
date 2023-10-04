@@ -40,7 +40,8 @@ jobs:
           jsonFile=$(curl -s 'https://api.laut.fm/station/retrowelle/last_songs')
           echo $jsonFile | jq empty
           elementCounter=$(echo $jsonFile | jq '. | length')
-          if [[ elementCounter < 11 ]]; then
+          echo "elementCounter: $elementCounter"
+          if [[ $elementCounter < 11 ]]; then
             echo "Feed contains less elements than expected."
             exit 1
           fi
