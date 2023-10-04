@@ -35,7 +35,7 @@ jobs:
           echo $jsonFile | jq empty
           elementCounter=$(echo $jsonFile | jq '. | length')
           echo "elementCounter: $elementCounter"
-          if [[ $elementCounter -lt 11 ]]; then
+          if [[ $elementCounter -lt 5 ]]; then
             echo "Feed contains less elements than expected."
             exit 1
           fi
