@@ -35,5 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Validate YAML file
-        run: echo '{"message":"stock is reserved"}' | jq empty
+      - name: Validate json file
+        run: echo '{"message:"stock is reserved"}' | jq empty
