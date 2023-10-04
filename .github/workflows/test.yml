@@ -36,4 +36,8 @@ jobs:
           echo test, and deploy your project.
 
       - name: Validate json file
-        run: echo '{"message:"stock is reserved"}' | jq empty
+        run: |
+          jsonFile=$(curl -s 'https://api.laut.fm/station/retrowelle/last_songs')
+          echo $jsonFile | jq empty
+          echo $jsonFile | jq '. | length'
+          
