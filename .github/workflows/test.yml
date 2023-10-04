@@ -29,12 +29,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       - name: Validate json file
         run: |
           jsonFile=$(curl -s 'https://api.laut.fm/station/retrowelle/last_songs')
@@ -45,4 +39,9 @@ jobs:
             echo "Feed contains less elements than expected."
             exit 1
           fi
-          
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
